@@ -1,0 +1,23 @@
+name: My First Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  demo-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Welcome Message
+        run: echo "Hello Sandhya"
+
+      - name: Show Files
+        run: ls -la
+
+      - name: Pipeline Success
+        run: echo "GitHub Actions Pipeline Completed Successfully"
